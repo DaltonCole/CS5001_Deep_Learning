@@ -1,0 +1,2 @@
+default:
+	python3 assignment1.py 
