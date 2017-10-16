@@ -1,0 +1,59 @@
+\documentclass[times]{article}
+
+\usepackage[margin=1.0in]{geometry}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[none]{hyphenat}
+\usepackage{amsmath}
+\usepackage[us]{datetime}
+\usepackage[explicit]{titlesec}
+\begin{document}
+	\title{CS 5001 Deep Learning - Fall 2017 \\ Homework 2}
+	\author{Dalton Cole}
+	\date{\formatdate{24}{10}{2017}}
+	\maketitle
+
+	With initial weights $w_0 = -206$, $w_1 = -883$, $w_2 = 230$, $w_3 = 882$, and $w_4 = -173$ and employing incremental gradient descent logistic regression yields the results shown in Table \ref{tab:results}.
+
+	\begin{table}
+		\centering
+		\caption{Logistic Regression Results}
+		\label{tab:results}
+		\begin{tabular}{| c | c |}
+			\hline
+			Learning rate & .001 \\
+			\hline
+			Number of Iterations & 5000 \\
+			\hline
+			Sum of Squares Error & 1 \\
+			\hline
+			\multicolumn{2}{|c|}{Initial Weights} \\
+			\hline
+			$w_0$ & -206 \\
+			\hline
+			$w_1$ & -883 \\
+			\hline
+			$w_2$ & -230 \\
+			\hline
+			$w_3$ & 882 \\
+			\hline
+			$w_4$ & -173 \\
+			\hline
+			\multicolumn{2}{|c|}{Final Weights} \\
+			\hline
+			$w_0$ & -219.759103 \\
+			\hline
+			$w_1$ & -887.016586 \\
+			\hline
+			$w_2$ & 221.240897 \\
+			\hline
+			$w_3$ & 872.983414 \\
+			\hline
+			$w_4$ & -173.000000 \\
+			\hline
+		\end{tabular}
+	\end{table}
+		
+\end{document}
