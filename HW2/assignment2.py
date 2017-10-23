@@ -1,4 +1,4 @@
-# File name:      assignment1.py
+# File name:      assignment2.py
 # Author:         Dalton Cole
 from random import randrange
 from math import e
@@ -32,12 +32,20 @@ number_of_iterations = 5000
 
 ### Initalize ###
 x0 = 1
-w0 = randrange(-1000,1001)
-w1 = randrange(-1000,1001)
-w2 = randrange(-1000,1001)
-w3 = randrange(-1000,1001)
-w4 = randrange(-1000,1001)
+w0 = randrange(-100,101)
+w1 = randrange(-100,101)
+w2 = randrange(-100,101)
+w3 = randrange(-100,101)
+w4 = randrange(-100,101)
 #################
+
+"""
+print(w0)
+print(w1)
+print(w2)
+print(w3)
+print(w4)
+"""
 
 # List containing (x1, x2, x3, x4, y)
 input_output_list_tuple = []
@@ -66,12 +74,11 @@ for i in range(number_of_iterations):
 		delta = y - y_bar
 
 		# Update weights = wi ← wi + ηδp(1 − p)Xi(e)
-		w0 = w0 + (learning_rate * delta * x0) 
-		w1 = w1 + (learning_rate * delta * x1)
-		w2 = w2 + (learning_rate * delta * x2)
-		w3 = w3 + (learning_rate * delta * x3)
-		w4 = w4 + (learning_rate * delta * x4)
-
+		w0 = w0 + (learning_rate * delta * y_bar * (1 - y_bar) * x0) 
+		w1 = w1 + (learning_rate * delta * y_bar * (1 - y_bar) * x1)
+		w2 = w2 + (learning_rate * delta * y_bar * (1 - y_bar) * x2)
+		w3 = w3 + (learning_rate * delta * y_bar * (1 - y_bar) * x3)
+		w4 = w4 + (learning_rate * delta * y_bar * (1 - y_bar) * x4)
 
 # Calculate sum of squares
 sum_of_squares = 0
@@ -85,7 +92,7 @@ print("No cats were hurt gathering this data.")
 print()
 print("Using learning rate eta = " + str(learning_rate))
 print("After %d iterations:" % number_of_iterations)
-print("Sum of Squares Errors = %d " % sum_of_squares)
+print("Sum of Squares Errors = " + str(sum_of_squares))
 print("Weights:")
 print("w0 = %f" % w0)
 print("w1 = %f" % w1)
