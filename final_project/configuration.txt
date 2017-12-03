@@ -1,0 +1,4 @@
+Random_Seed 1
+Discount_Rate 0.1
+TD_Step_Size 0.1
+Evaluations 1000000

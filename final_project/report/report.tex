@@ -1,0 +1,49 @@
+\documentclass[times]{article}
+
+\usepackage[margin=1.0in]{geometry}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[none]{hyphenat}
+\usepackage{amsmath}
+\usepackage[us]{datetime}
+\usepackage[explicit]{titlesec}
+\usepackage{standalone}
+\usepackage{color}
+\usepackage[table]{xcolor}
+\usepackage{bm}
+\maxdeadcycles=100000
+\begin{document}
+	\title{COMP SCI 5001 FS2017 Final Project}
+	\author{Dalton Cole \\ drcgy5@mst.edu}
+	\date{\formatdate{13}{12}{2017}}
+	\maketitle
+  
+	For this project, Q-Learning was used to compute the optimal policy for Tinny Tim to maximize his donuty reward.
+
+	The policy found along with the reward for each square is shown in Table \ref{tab:grid}. The configurations file used is shown in Table \ref{tab:conf}.
+
+	As can be seen by Table \ref{tab:grid}, each of the squares where tiles fall are avoided with no arrow leading to them. Each donut square, minus the lower right hand corner, has a square pointing to the donut square. There is also only one positive square on the entire grid. This is probably because of the number of evaluations performed. If a tile hit Tim, or if he accidentally ran into a wall, he lost a reward, thus it was easier to be in the negative than positive.
+
+	\begin{table}
+		\centering
+		\caption{Configuration File Used}
+		\label{tab:conf}
+		\begin{tabular}{| c | c |}
+			\hline
+			Random Seed & 0 \\
+			\hline
+			Discount Rate & 0.1 \\
+			\hline
+			TD Step Size & 0.1 \\
+			\hline
+			Evaluations & 123,456,789,012 \\
+			\hline
+		\end{tabular}
+	\end{table}
+
+	\input{colored_table.tex}
+
+		
+\end{document}
